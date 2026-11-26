@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ULLAGIX — Marine Cargo Calculations</title>
+<meta name="description" content="ULLAGIX is a tanker loading and discharging system for cargo surveyors and loading masters: loading plans, vessel plans, blend calculations, progress updates, ullage, VEF, line displacement and detailed cargo reports — ASTM D1250 / API MPMS 11.1.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:title" content="ULLAGIX — Marine Cargo Calculations">
+<meta property="og:description" content="Tanker loading & discharging system — from the loading plan to the final cargo report.">
+<meta property="og:image" content="img/logo.png">
+<style>
+:root{--navy:#0d2a5a;--navy2:#123672;--gold:#f0b400;--sky:#4fb3f0;--ink:#16213a;--muted:#5b6780;--line:#e3e8f0;--bg:#f6f8fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:var(--navy2)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+header.top img{height:42px;display:block}
+nav a{margin-left:26px;text-decoration:none;color:var(--ink);font-weight:500;font-size:15px}
+nav a.cta{background:var(--navy);color:#fff;padding:9px 18px;border-radius:8px}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,#0a2048 60%,#0b2f63 100%);color:#fff;padding:84px 0 0;overflow:hidden}
+.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.1;margin:0 0 18px;letter-spacing:-.5px;max-width:760px}
+.hero h1 span{color:var(--gold)}
+.hero p.lead{font-size:19px;color:#c9d6ea;max-width:680px;margin:0 0 32px}
+.btns a{display:inline-block;padding:13px 24px;border-radius:9px;font-weight:600;text-decoration:none;margin:0 12px 12px 0}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.4);color:#fff}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 48px}
+.badges span{font-size:13px;color:#cfe3ff;border:1px solid rgba(255,255,255,.2);padding:5px 12px;border-radius:99px}
+.shot{border-radius:14px 14px 0 0;box-shadow:0 -10px 60px rgba(0,0,0,.35);display:block;width:100%;border:1px solid rgba(255,255,255,.15);border-bottom:0}
+section{padding:84px 0}
+h2{font-size:34px;margin:0 0 10px;letter-spacing:-.3px;color:var(--navy)}
+.sub{color:var(--muted);font-size:18px;max-width:700px;margin:0 0 44px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{border:1px solid var(--line);border-radius:14px;padding:24px;background:#fff}
+.card .ic{width:42px;height:42px;border-radius:10px;background:#eef4ff;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:14px}
+.card h3{margin:0 0 6px;font-size:18px;color:var(--navy)}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.alt{background:var(--bg)}
+.split{display:grid;grid-template-columns:1fr 1.25fr;gap:48px;align-items:center}
+.split img{width:100%;border-radius:12px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(13,42,90,.12)}
+.split ul{padding:0;list-style:none;margin:20px 0 0}
+.split li{padding:7px 0 7px 30px;position:relative;color:var(--ink)}
+.split li:before{content:"";position:absolute;left:0;top:13px;width:16px;height:16px;border-radius:50%;background:var(--gold)}
+.std{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:10px}
+.std div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+.std b{display:block;color:var(--navy);font-size:16px}
+.std small{color:var(--muted);font-size:14px}
+.contact{background:var(--navy);color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact p{color:#c9d6ea;font-size:18px;max-width:620px;margin:0 auto 28px}
+footer{background:#081a3a;color:#8fa3c2;font-size:13px;padding:26px 0;text-align:center}
+@media(max-width:820px){nav a:not(.cta){display:none}.split{grid-template-columns:1fr}.hero{padding-top:56px}}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a href="#"><img src="img/logo.png" alt="ULLAGIX — Marine Cargo Calculations"></a>
+  <nav><a href="#features">Features</a><a href="#how">How it works</a><a href="#standards">Standards</a><a class="cta" href="#contact">Contact</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <h1>From the loading plan to the final cargo report — <span>in one program.</span></h1>
+  <p class="lead">ULLAGIX is a tanker loading &amp; discharging system built by a working cargo surveyor. Plan the loading, follow it live, check the vessel figures and hand the client a complete, professional report.</p>
+  <div class="btns"><a class="btn-gold" href="#contact">Request a demo</a><a class="btn-ghost" href="#features">See what it does</a></div>
+  <div class="badges"><span>ASTM D1250 / API MPMS 11.1</span><span>API MPMS 12.3 blending</span><span>Works offline</span><span>Mac · Windows · iPad</span></div>
+  <img class="shot" src="img/progress.jpg" alt="ULLAGIX Progress Update screen">
+</div></div>
+
+<section id="features"><div class="wrap">
+  <h2>Everything the loading needs</h2>
+  <p class="sub">Each page feeds the next — enter the job once and the plan, the live figures and the reports stay in step.</p>
+  <div class="grid">
+    <div class="card"><div class="ic">📋</div><h3>Cargo Loading Plan</h3><p>Shore tanks, lines, parcels, line pushes and butane injection, step by step — printed or exported to Excel.</p></div>
+    <div class="card"><div class="ic">🧪</div><h3>Blend Calc &amp; shrinkage</h3><p>Blend API and temperature per parcel, with API MPMS 12.3 shrinkage flagged when it is significant.</p></div>
+    <div class="card"><div class="ic">🚢</div><h3>Vessel Plan</h3><p>Tank-by-tank stowage in m³ for each step, with ship stops, line clears and ullage checks.</p></div>
+    <div class="card"><div class="ic">⏱️</div><h3>Progress Update</h3><p>Live loaded quantity, rates, tank switches and ETC — and the email update written for you.</p></div>
+    <div class="card"><div class="ic">📏</div><h3>Ullage, Shore &amp; Stops</h3><p>Ullage reports, shore quantities and stop calculations with the terminal strapping tables built in.</p></div>
+    <div class="card"><div class="ic">🔁</div><h3>Line Displacement</h3><p>Line verification reports with tolerances by gauging method, fed straight from the time log.</p></div>
+    <div class="card"><div class="ic">⚖️</div><h3>VEF with data check</h3><p>Vessel experience factor with automatic flags for wrong units, duplicates, dates and gross errors.</p></div>
+    <div class="card"><div class="ic">📑</div><h3>Detailed Cargo Report</h3><p>Plans, sequence of events, delays, ullage and line verification in one report for the client.</p></div>
+  </div>
+</div></section>
+
+<section class="alt" id="how"><div class="wrap split">
+  <div>
+    <h2>See the plan before it happens</h2>
+    <p class="sub" style="margin-bottom:0">The plan animation shows the cargo flowing from each shore tank, through the terminal lines and manifold, into the ship's tanks — product switches and line pushes included.</p>
+    <ul><li>Built from your own loading and vessel plans</li><li>Ideal for the pre-transfer meeting with the Chief Officer</li><li>Profile and plan view of the vessel, filled to 95 %</li></ul>
+  </div>
+  <img src="img/animation.jpg" alt="ULLAGIX plan animation">
+</div></section>
+
+<section><div class="wrap split">
+  <img src="img/vplan.jpg" alt="ULLAGIX Vessel Plan">
+  <div>
+    <h2>Your figures, your data</h2>
+    <p class="sub" style="margin-bottom:0">ULLAGIX runs on your own computer — no internet needed on board or at the terminal.</p>
+    <ul><li>Jobs saved in an encrypted data file you control</li><li>PDF printouts with your company letterhead</li><li>Passphrase-protected copies for your team</li></ul>
+  </div>
+</div></section>
+
+<section class="alt" id="standards"><div class="wrap">
+  <h2>Built on industry standards</h2>
+  <p class="sub">Calculations follow the measurement standards used for custody transfer.</p>
+  <div class="std">
+    <div><b>ASTM D1250 / API MPMS 11.1</b><small>Volume correction factors, with the standard's rounding</small></div>
+    <div><b>API MPMS 12.3</b><small>Volumetric shrinkage when blending</small></div>
+    <div><b>Terminal strapping tables</b><small>Built in for the terminals you work</small></div>
+    <div><b>Gauging tolerances</b><small>Manual and automatic tank gauging</small></div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2>Want to see ULLAGIX on your next job?</h2>
+  <p>Ask for a demo or a trial copy for your team.</p>
+  <div class="btns"><a class="btn-gold" href="mailto:info@ullagix.com?subject=ULLAGIX%20demo">info@ullagix.com</a></div>
+</div></section>
+
+<footer>ULLAGIX™ · Copyright © 2026 Capt. Vladimir A. Pazmino. All rights reserved.</footer>
+</body>
+</html>
