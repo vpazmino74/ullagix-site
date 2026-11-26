@@ -41,7 +41,7 @@ h2{font-size:34px;margin:0 0 10px;letter-spacing:-.3px;color:var(--navy)}
 .card p{margin:0;color:var(--muted);font-size:15px}
 .alt{background:var(--bg)}
 .split{display:grid;grid-template-columns:1fr 1.25fr;gap:48px;align-items:center}
-.split img{width:100%;border-radius:12px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(13,42,90,.12)}
+.split img,.split video{width:100%;display:block;background:#fff;border-radius:12px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(13,42,90,.12)}
 .split ul{padding:0;list-style:none;margin:20px 0 0}
 .split li{padding:7px 0 7px 30px;position:relative;color:var(--ink)}
 .split li:before{content:"";position:absolute;left:0;top:13px;width:16px;height:16px;border-radius:50%;background:var(--gold)}
@@ -92,7 +92,7 @@ footer{background:#081a3a;color:#8fa3c2;font-size:13px;padding:26px 0;text-align
     <p class="sub" style="margin-bottom:0">The plan animation shows the cargo flowing from each shore tank, through the terminal lines and manifold, into the ship's tanks — product switches and line pushes included.</p>
     <ul><li>Built from your own loading and vessel plans</li><li>Ideal for the pre-transfer meeting with the Chief Officer</li><li>Profile and plan view of the vessel, filled to 95 %</li></ul>
   </div>
-  <img src="img/animation.jpg" alt="ULLAGIX plan animation">
+  <video src="img/demo.mp4" poster="img/demo-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="ULLAGIX plan animation demo"></video>
 </div></section>
 
 <section><div class="wrap split">
